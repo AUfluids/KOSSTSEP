@@ -1,0 +1,37 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    location        "constant";
+    object          turbulenceProperties;
+}
+
+simulationType  RAS;
+
+RAS
+{
+    RASModel            kOmegaSSTSEP;
+
+    //Separation coefficients - Optional
+    separationMode      4;              \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
+    separationLambda1   20;             \\optional - default taken from separationMode 4
+    separationLambda2   7.2513;         \\optional - default taken from separationMode 4
+    C0                  -0.872209;      \\optional - default taken from separationMode 4
+    C1                  0.0131861;      \\optional - default taken from separationMode 4
+    C2                  -0.0766894;     \\optional - default taken from separationMode 4
+
+    turbulence      on;
+    printCoeffs     on;
+}
+
+
+// ************************************************************************* //
