@@ -72,8 +72,9 @@ You can also check the test case of PH2800.
 
 For more details, refer to the publication at: LINK Progressive augmentation of RANS models for separated flow prediction by CFD-driven surrogate optimisation
 
-Qualitative results for a duct flow of aspect ratio 1 at bulk Reynolds number 3500 for Model **II**:
-![alt text](https://github.com/AUfluids/EARSCM/blob/main/testCases/ductFlowAR1Reb3500/SD_u.png)
+Results of using KOSSTSEP for curved backward-facing step with bulk Reynolds number of 13700 **I** and **III**:
+![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/contours_comparisonCBFS.jpg)
+![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/quantitative_comparison_CBFS.jpg)
 
 ## How to cite
 Please, cite this library using the following DOI: DOI.
