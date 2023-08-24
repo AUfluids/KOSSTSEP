@@ -422,7 +422,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "separationLambda2",
             this->coeffDict_,
-            7.2513
+            0.0
         )
     ),
     C0_
@@ -672,7 +672,7 @@ void kOmegaSSTSEPBase<BasicEddyViscosityModel>::correct()
 
     if (separationMode_.value() == 3.0)
     {   
-        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0 && separationLambda1_.value() == 0.0 && separationLambda1_.value() == 0.0)
+        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0 && separationLambda1_.value() == 0.0 && separationLambda2_.value() == 0.0)
         {
             C0_ = -0.252012;
             C1_ = -0.441849;
@@ -684,7 +684,7 @@ void kOmegaSSTSEPBase<BasicEddyViscosityModel>::correct()
 
     if (separationMode_.value() == 4.0)
     {
-        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0 && separationLambda1_.value() == 0.0 && separationLambda1_.value() == 0.0)
+        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0 && separationLambda1_.value() == 0.0 && separationLambda2_.value() == 0.0)
         {
             C0_ = -0.872209;
             C1_ = 0.0131861;
