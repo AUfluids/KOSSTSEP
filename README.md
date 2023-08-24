@@ -53,27 +53,36 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
 
          libs ( "libSEPIncompressibleTurbulenceModels" ) ;
 
-4. Specify
+4. Specify the following in _turbulentProperties_.
 
          RASModel kOmegaSSTSEP;
-
-in _turbulentProperties_.
-
-5. Add the subdictionary
+    (We suggest first running your case with the standard $k-\omega$ SST and then changing the model to kOmegaSSTSEP, to avoid irrelevant errors)
+   
+6. (Optional) 4 different separation equations are obtained (More info inside the paper).
+   The model _IV_ is the default setting but you can change it by adding the following subdictionary to _turbulentProperties_.
 
          separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
-z
-to _turbulentProperties_.
+    If you use 0, the separation factor is deactivated, and the standard $k-\omega$ SST is used.
+   
+7. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
+   Otherwise, these coefficients are automatically assigned with values corresponding to the model specified by _separationMode_. 
+
+           separationLambda1   20;             \\optional 
+           separationLambda2   7.2513;         \\optional
+           C0                  -0.872209;      \\optional 
+           C1                  0.0131861;      \\optional 
+           C2                  -0.0766894;     \\optional 
 
 
-You can also check the test case of PH2800.
+You can also check the test case of CBFS13700 in the folder testCases.
 
 ## Test results
 
 For more details, refer to the publication at: LINK Progressive augmentation of RANS models for separated flow prediction by CFD-driven surrogate optimisation
 
-Qualitative results for a duct flow of aspect ratio 1 at bulk Reynolds number 3500 for Model **II**:
-![alt text](https://github.com/AUfluids/EARSCM/blob/main/testCases/ductFlowAR1Reb3500/SD_u.png)
+Results of using KOSSTSEP for curved backward-facing step with bulk Reynolds number of 13700 **I** and **III**:
+![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/contours_comparisonCBFS.jpg)
+![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/quantitative_comparison_CBFS.jpg)
 
 ## How to cite
 Please, cite this library using the following DOI: DOI.
