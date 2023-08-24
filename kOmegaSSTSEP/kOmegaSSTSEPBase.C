@@ -404,7 +404,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "separationMode",
             this->coeffDict_,
-            0.0
+            4.0
         )
     ),
     separationLambda1_
