@@ -56,8 +56,9 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
 4. Specify the following in _turbulentProperties_.
 
          RASModel kOmegaSSTSEP;
-
-5. (Optional) 4 different separation equations are obtained (More info inside the paper).
+    (We suggest first running your case with the standard $k-\omega$ SST and then changing the model to kOmegaSSTSEP, to avoid irrelevant errors)
+   
+6. (Optional) 4 different separation equations are obtained (More info inside the paper).
    The model _IV_ is the default setting but you can change it by adding the following subdictionary to _turbulentProperties_.
 
          separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
