@@ -404,7 +404,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "separationMode",
             this->coeffDict_,
-            4
+            0.0
         )
     ),
     separationLambda1_
@@ -413,7 +413,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "separationLambda1",
             this->coeffDict_,
-            20.0
+            0.0
         )
     ),
     separationLambda2_
@@ -431,7 +431,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "C0",
             this->coeffDict_,
-            -0.872209
+            0.0
         )
     ),
     C1_
@@ -440,7 +440,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "C1",
             this->coeffDict_,
-            0.0131861
+            0.0
         )
     ),
     C2_
@@ -449,7 +449,7 @@ kOmegaSSTSEPBase<BasicEddyViscosityModel>::kOmegaSSTSEPBase
         (
             "C2",
             this->coeffDict_,
-            -0.0766894
+            0.0
         )
     ),
     F3_
@@ -647,39 +647,51 @@ void kOmegaSSTSEPBase<BasicEddyViscosityModel>::correct()
     // Separation Factor
 
     if (separationMode_.value() == 1.0)
-    {
-        C0_ = -1.08213;
-        C1_ = -0.377233;
-        C2_ = 0.062756;
+    {   
+        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0)
+        {
+            C0_ = -1.08213;
+            C1_ = -0.377233;
+            C2_ = 0.062756;
+        }   
         separationLambda1_ = 1.0;
         separationLambda2_ = 1.0;
     }
 
     if (separationMode_.value() == 2.0)
-    {
-        C0_ = -1.85884;
-        C1_ = 0.0626469;
-        C2_ = 0.0157284;
+    {   
+        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0)
+        {
+            C0_ = -1.85884;
+            C1_ = 0.0626469;
+            C2_ = 0.0157284;
+        }
         separationLambda1_ = 1.0;
         separationLambda2_ = 1.0;
     }
 
     if (separationMode_.value() == 3.0)
-    {
-        C0_ = -0.252012;
-        C1_ = -0.441849;
-        C2_ = -0.0254661;
-        separationLambda1_ = 16.4685;
-        separationLambda2_ = 3.99033;
+    {   
+        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0 && separationLambda1_.value() == 0.0 && separationLambda1_.value() == 0.0)
+        {
+            C0_ = -0.252012;
+            C1_ = -0.441849;
+            C2_ = -0.0254661;
+            separationLambda1_ = 16.4685;
+            separationLambda2_ = 3.99033;
+        }
     }
 
     if (separationMode_.value() == 4.0)
     {
-        C0_ = -0.872209;
-        C1_ = 0.0131861;
-        C2_ = -0.0766894;
-        separationLambda1_ = 20;
-        separationLambda2_ = 7.2513;
+        if (C0_.value() == 0.0 && C1_.value() == 0.0 && C2_.value() == 0.0 && separationLambda1_.value() == 0.0 && separationLambda1_.value() == 0.0)
+        {
+            C0_ = -0.872209;
+            C1_ = 0.0131861;
+            C2_ = -0.0766894;
+            separationLambda1_ = 20;
+            separationLambda2_ = 7.2513;
+        }
     }
 
 
