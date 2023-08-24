@@ -53,20 +53,25 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
 
          libs ( "libSEPIncompressibleTurbulenceModels" ) ;
 
-4. Specify
+4. Specify the following in _turbulentProperties_.
 
          RASModel kOmegaSSTSEP;
 
-in _turbulentProperties_.
-
-5. Add the subdictionary
+5. (Optional) Add the following subdictionary to _turbulentProperties_. Otherwise, the modelIV:4 is the default model to use. 
 
          separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
-z
-to _turbulentProperties_.
+
+6. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
+   Otherwise, the modelIV is the default model to use. 
+
+           separationLambda1   20;             \\optional - default taken from separationMode 4
+           separationLambda2   7.2513;         \\optional - default taken from separationMode 4
+           C0                  -0.872209;      \\optional - default taken from separationMode 4
+           C1                  0.0131861;      \\optional - default taken from separationMode 4
+           C2                  -0.0766894;     \\optional - default taken from separationMode 4
 
 
-You can also check the test case of PH2800.
+You can also check the test case of CBFS13700 in the folder testCases.
 
 ## Test results
 
