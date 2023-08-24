@@ -65,13 +65,13 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
     If you use 0, the separation factor is deactivated, and the standard $k-\omega$ SST is used.
    
 7. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
-   Otherwise, the model _IV_ is the default model to use. 
+   Otherwise, these coefficients are automatically assigned with values corresponding to the model specified by _separationMode_. 
 
-           separationLambda1   20;             \\optional - default taken from separationMode 4
-           separationLambda2   7.2513;         \\optional - default taken from separationMode 4
-           C0                  -0.872209;      \\optional - default taken from separationMode 4
-           C1                  0.0131861;      \\optional - default taken from separationMode 4
-           C2                  -0.0766894;     \\optional - default taken from separationMode 4
+           separationLambda1   20;             \\optional 
+           separationLambda2   7.2513;         \\optional
+           C0                  -0.872209;      \\optional 
+           C1                  0.0131861;      \\optional 
+           C2                  -0.0766894;     \\optional 
 
 
 You can also check the test case of CBFS13700 in the folder testCases.
