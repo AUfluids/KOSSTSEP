@@ -57,12 +57,13 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
 
          RASModel kOmegaSSTSEP;
 
-5. (Optional) Add the following subdictionary to _turbulentProperties_. Otherwise, the modelIV:4 is the default model to use. 
+5. (Optional) 4 different separation equations are obtained (More info inside the paper).
+   The model _IV_ is the default setting but you can change it by adding the following subdictionary to _turbulentProperties_.
 
          separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
 
-6. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
-   Otherwise, the modelIV is the default model to use. 
+7. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
+   Otherwise, the model _IV_ is the default model to use. 
 
            separationLambda1   20;             \\optional - default taken from separationMode 4
            separationLambda2   7.2513;         \\optional - default taken from separationMode 4
