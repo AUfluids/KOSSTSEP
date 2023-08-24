@@ -61,7 +61,8 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
    The model _IV_ is the default setting but you can change it by adding the following subdictionary to _turbulentProperties_.
 
          separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
-
+    If you use 0, the separation factor is deactivated, and the standard $k-\omega$ SST is used.
+   
 7. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
    Otherwise, the model _IV_ is the default model to use. 
 
