@@ -89,15 +89,17 @@ Results of using KOSSTSEP for curved backward-facing step with bulk Reynolds num
 Please, cite this library using the following DOI: DOI.
 
 Amarloo and Rincón (2023)
-@article{amarlooRincon2023progressive,
-  title={Progressive augmentation of turbulence models for flow separation by multi-case computational fluid dynamics driven surrogate optimisation},
-  author={Amarloo, Ali and Rinc{\'o}n, Mario Javier and Abkar, Mahdi},
-  journal={Physics of Fluids},
-  volume={000},
-  pages={000},
-  year={0000},
-  publisher={AIP Publishing}
-}
+
+    @article{amarlooRincon2023progressive,
+      title={Progressive augmentation of turbulence models for flow separation by multi-case computational fluid dynamics driven surrogate optimisation},
+      author={Amarloo, Ali and Rinc{\'o}n, Mario Javier and Abkar, Mahdi},
+      journal={Physics of Fluids},
+      volume={000},
+      pages={000},
+      year={0000},
+      publisher={AIP Publishing}
+    }
+
 (under review)
 
 For release-specific DOIs, click on the badge and find the DOI corresponding to the desired version in the version list.
