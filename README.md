@@ -21,16 +21,15 @@ Copyright Information
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Description
-Progressive augmentation of the $k-\omega$ SST turbulence model in OpenFoam.
-This correction will enhance the performance of $k-\omega$ SST turbulence model in 
-capturing the separation phenomenon. This model has been tested on several cases
+Progressive augmentation of the kOmegaSST turbulence model in OpenFOAM.
+This correction enhances the performance of kOmegaSST turbulence model in 
+capturing the separation phenomenon. This model has been tested on several 2D canonical flow cases
 including periodic hills, curved backward-facing step, converging-diverging channel, and parametric bumps. 
-Implementation of the Explicit algebraic Reynolds stress correction model (EARSCM)
-The model has been developed for 2D flows but its applicability has been tested on 3D
-flows, yielding similar results.
+The implementation of the augmented model has been developed for 2D flows but 
+its applicability has been tested on 3D flows, yielding similar results.
 Five coefficients can be modified by the user to change the model's performance. 
 Standard optimised values are given by default in the model.
-More info is available in the publication listed at the end.
+More information is available in the publication listed at the of this file.
 
 ## Target platform
 The code is known to work with OpenFOAM v2212.
@@ -56,15 +55,17 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
 4. Specify the following in _turbulentProperties_.
 
          RASModel kOmegaSSTSEP;
-    (We suggest first running your case with the standard $k-\omega$ SST and then changing the model to kOmegaSSTSEP, to avoid irrelevant errors)
    
-6. (Optional) 4 different separation equations are obtained (More info inside the paper).
+    (We suggest first running your case with the standard kOmegaSST and then changing the model to kOmegaSSTSEP, to avoid possible errors)
+   
+6. (Optional) 4 different separation equations are obtained (More info inside the published manuscript).
    The model _IV_ is the default setting but you can change it by adding the following subdictionary to _turbulentProperties_.
 
          separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
-    If you use 0, the separation factor is deactivated, and the standard $k-\omega$ SST is used.
    
-7. (Optional) You can also specify the 5 coefficients ($C_0, C_1, C_2, \lambda_1, \lambda_2$) corresponding to the separation factor in  _turbulentProperties_.
+    If you use 0, the separation factor is deactivated, and the standard kOmegaSST is used.
+   
+8. (Optional) You can also specify the 5 coefficients (C_0, C_1, C_2, separationLambda1, separationLambda2) corresponding to the separation factor in  _turbulentProperties_.
    Otherwise, these coefficients are automatically assigned with values corresponding to the model specified by _separationMode_. 
 
            separationLambda1   20;             \\optional 
@@ -89,13 +90,13 @@ Please, cite this library using the following DOI: DOI.
 
 Amarloo and Rincón (2023)
 @article{amarlooRincon2023progressive,
-  title={Progressive augmentation of RANS models for separated flow prediction by CFD-driven surrogate optimisation},
+  title={Progressive augmentation of turbulence models for flow separation by multi-case computational fluid dynamics driven surrogate optimisation},
   author={Amarloo, Ali and Rinc{\'o}n, Mario Javier and Abkar, Mahdi},
-  journal={Internaltional Journal of Heat and Fluid Flow},
+  journal={Physics of Fluids},
   volume={000},
   pages={000},
   year={0000},
-  publisher={Elsevier}
+  publisher={AIP Publishing}
 }
 (under review)
 
