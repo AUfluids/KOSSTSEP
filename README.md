@@ -93,7 +93,7 @@ Amarloo and Rincón (2023)
     @article{amarlooRincon2023progressive,
       title={Progressive augmentation of turbulence models for flow separation by multi-case computational fluid dynamics driven surrogate optimisation},
       author={Amarloo, Ali and Rinc{\'o}n, Mario Javier, and Reclari Martino, and Abkar, Mahdi},
-      journal={Physics of Fluids},
+      journal={Physics of Fluids (submitted)},
       volume={000},
       pages={000},
       year={0000},
