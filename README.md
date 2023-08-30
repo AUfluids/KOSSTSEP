@@ -82,8 +82,8 @@ You can also check the test case of CBFS13700 in the folder testCases.
 For more details, refer to the publication at: LINK Progressive augmentation of RANS models for separated flow prediction by CFD-driven surrogate optimisation
 
 Results of using KOSSTSEP for curved backward-facing step with bulk Reynolds number of 13700 **I** and **III**:
-![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/contours_comparisonCBFS.jpg)
-![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/quantitative_comparison_CBFS.jpg)
+![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/contours_comparisonCBFS.png)
+![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/quantitative_comparison_CBFS.png)
 
 ## How to cite
 Please, cite this library using the following DOI: DOI.
