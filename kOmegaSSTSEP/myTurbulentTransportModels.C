@@ -32,6 +32,8 @@ License
 #include "kOmegaSSTSEP.H"
 makeRASModel(kOmegaSSTSEP);
 
+#include "kOmegaSSTLMSEP.H"
+makeRASModel(kOmegaSSTLMSEP);
 
 
 // ************************************************************************* //
