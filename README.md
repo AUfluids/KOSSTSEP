@@ -61,18 +61,18 @@ Mario Javier Rincón <mjrp@mpe.au.dk>
 6. (Optional) 4 different separation equations are obtained (More info inside the published manuscript).
    The model _IV_ is the default setting but you can change it by adding the following subdictionary to _turbulentProperties_.
 
-         separationMode  4; \\optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
+         separationMode  4; //optional - default:4 - off:0 | ModelI:1 | ModelII:2 | ModelIII:3 | ModelIV:4
    
     If you use 0, the separation factor is deactivated, and the standard kOmegaSST is used.
    
 8. (Optional) You can also specify the 5 coefficients (C_0, C_1, C_2, separationLambda1, separationLambda2) corresponding to the separation factor in  _turbulentProperties_.
    Otherwise, these coefficients are automatically assigned with values corresponding to the model specified by _separationMode_. 
 
-           separationLambda1   20;             \\optional 
-           separationLambda2   7.2513;         \\optional
-           C0                  -0.872209;      \\optional 
-           C1                  0.0131861;      \\optional 
-           C2                  -0.0766894;     \\optional 
+           separationLambda1   20;             //optional 
+           separationLambda2   7.2513;         //optional
+           C0                  -0.872209;      //optional 
+           C1                  0.0131861;      //optional 
+           C2                  -0.0766894;     //optional 
 
 
 You can also check the test case of CBFS13700 in the folder testCases.
