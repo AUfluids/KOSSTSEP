@@ -91,13 +91,16 @@ Please, cite this library using the following DOI: DOI.
 Amarloo and Rincón (2023)
 
     @article{amarlooRincon2023progressive,
-      title={Progressive augmentation of turbulence models for flow separation by multi-case computational fluid dynamics driven surrogate optimisation},
-      author={Amarloo, Ali and Rinc{\'o}n, Mario Javier, and Reclari Martino, and Abkar, Mahdi},
-      journal={Physics of Fluids (submitted)},
-      volume={000},
-      pages={000},
-      year={0000},
-      publisher={AIP Publishing}
+        author = {Amarloo, Ali and Rincón, Mario Javier and Reclari, Martino and Abkar, Mahdi},
+        title = "{Progressive augmentation of turbulence models for flow separation by multi-case computational fluid dynamics driven surrogate optimization}",
+        journal = {Physics of Fluids},
+        volume = {35},
+        number = {12},
+        pages = {125154},
+        year = {2023},
+        month = {12},
+        issn = {1070-6631},
+        doi = {10.1063/5.0174470},
     }
 
 (under review)
