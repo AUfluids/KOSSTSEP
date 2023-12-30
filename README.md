@@ -86,7 +86,7 @@ Results of using KOSSTSEP for curved backward-facing step with bulk Reynolds num
 ![alt text](https://github.com/AUfluids/KOSSTSEP/blob/main/testCases/CBFS13700_KOSSTSEP/quantitative_comparison_CBFS.png)
 
 ## How to cite
-Please, cite this library using the following DOI: DOI.
+Please, cite this library using the following DOI: [10.1063/5.0174470](https://doi.org/10.1063/5.0174470).
 
 Amarloo and Rincón (2023)
 
