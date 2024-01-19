@@ -32,7 +32,7 @@ Standard optimised values are given by default in the model.
 More information is available in the publication listed at the of this file.
 
 ## Target platform
-The code is known to work with OpenFOAM v2212.
+The code is known to work with OpenFOAM v2312 and previous ESI versions.
 
 ## Authors
 Ali Amarloo <amarloo@mpe.au.dk>
