@@ -100,8 +100,6 @@ Amarloo and Rincón (2023)
       publisher={AIP Publishing}
     }
 
-(under review)
-
 For release-specific DOIs, click on the badge and find the DOI corresponding to the desired version in the version list.
 
 ## Disclaimer
